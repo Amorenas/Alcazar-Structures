@@ -1,12 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi primera web</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alcazar Structures — Soluciones modulares y de ingeniería</title>
+  <meta name="description" content="Infraestructura modular, ingeniería rápida de despliegue y soluciones para defensa, emergencias y logística.">
+  <!-- Cuando pasemos a la fase creativa, aquí enlazaremos CSS y fuentes -->
 </head>
+
 <body>
-  <h1>¡Hola mundo!</h1>
-  <p>Esta es mi primera página web creada desde cero.</p>
+  <!-- ===== HEADER / NAV ===== -->
+  <header id="top" role="banner">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Inicio">Alcazar Structures</a>
+
+      <nav aria-label="Menú principal">
+        <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false">Menú</button>
+        <ul id="mainmenu" class="nav-list">
+          <li><a href="#soluciones">Soluciones</a></li>
+          <li><a href="#capacidades">Capacidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#cifras">Cifras</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== (gran imagen + mensaje + CTA) -->
+  <section id="hero" role="region" aria-label="Portada">
+    <!-- Reemplaza la imagen de fondo cuando apliquemos CSS -->
+    <div class="container hero-content">
+      <h1>Infraestructura modular para misiones críticas</h1>
+      <p>Despliegue rápido, rendimiento estructural y soporte integral en cualquier teatro de operaciones.</p>
+      <div class="cta-group">
+        <a class="btn btn-primary" href="#soluciones">Ver soluciones</a>
+        <a class="btn btn-secondary" href="#contacto">Solicitar propuesta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOQUES DE VALOR (3–4 columnas) ===== -->
+  <section id="valor" role="region" aria-label="Propuesta de valor">
+    <div class="container cards">
+      <article class="card">
+        <h3>Despliegue rápido</h3>
+        <p>Diseños prefabricados y logística optimizada para tiempos de instalación mínimos.</p>
+      </article>
+      <article class="card">
+        <h3>Rendimiento certificado</h3>
+        <p>Soluciones calculadas para viento, nieve y cargas operativas exigentes.</p>
+      </article>
+      <article class="card">
+        <h3>Modularidad</h3>
+        <p>Configuraciones escalables para hangares, almacenes, shelters y bases temporales.</p>
+      </article>
+      <article class="card">
+        <h3>Soporte integral</h3>
+        <p>Ingeniería, suministro, montaje y mantenimiento con un único interlocutor.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== SOLUCIONES (como “use cases” de la referencia) ===== -->
+  <section id="soluciones" role="region" aria-label="Soluciones">
+    <div class="container grid">
+      <header class="section-header">
+        <h2>Soluciones</h2>
+        <p>Estructuras para defensa, emergencias y logística.</p>
+      </header>
+
+      <article class="solution">
+        <figure class="solution-media">
+          <img src="https://picsum.photos/id/1011/960/540" alt="Hangares modulares" loading="lazy">
+        </figure>
+        <div class="solution-body">
+          <h3>Hangares modulares</h3>
+          <p>Claro libre, grandes luces y accesos de alta altura para aeronaves y UAS.</p>
+          <a class="link" href="#contacto">Solicitar ficha técnica</a>
+        </div>
+      </article>
+
+      <article class="solution">
+        <figure class="solution-media">
+          <img src="https://picsum.photos/id/1022/960/540" alt="Shelters y campamentos" loading="lazy">
+        </figure>
+        <div class="solution-body">
+          <h3>Shelters y campamentos</h3>
+          <p>Módulos habitables, sanidad de campaña y nodos C2 con climatización integrada.</p>
+          <a class="link" href="#contacto">Solicitar ficha técnica</a>
+        </div>
+      </article>
+
+      <article class="solution">
+        <figure class="solution-media">
+          <img src="https://picsum.photos/id/1032/960/540" alt="Almacenes y logística" loading="lazy">
+        </figure>
+        <div class="solution-body">
+          <h3>Almacenes y logística</h3>
+          <p>Infraestructura de almacenamiento, muelles y cubiertas temporales de gran capacidad.</p>
+          <a class="link" href="#contacto">Solicitar ficha técnica</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CAPACIDADES (rejilla de iconos/viñetas) ===== -->
+  <section id="capacidades" role="region" aria-label="Capacidades">
+    <div class="container grid-icons">
+      <header class="section-header">
+        <h2>Capacidades</h2>
+      </header>
+      <ul class="capabilities-list">
+        <li><strong>Ingeniería estructural</strong> — cálculo, modelado y memoria técnica.</li>
+        <li><strong>Prefabricación</strong> — producción estandarizada y control de calidad.</li>
+        <li><strong>Integraciones MEP</strong> — clima, potencia, iluminación y redes.</li>
+        <li><strong>Montaje rápido</strong> — equipos certificados y procedimientos HSE.</li>
+        <li><strong>Soporte ciclo de vida</strong> — repuestos, inspecciones y upgrades.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS (malla de tarjetas) ===== -->
+  <section id="proyectos" role="region" aria-label="Proyectos">
+    <div class="container cards">
+      <header class="section-header">
+        <h2>Proyectos destacados</h2>
+        <p>Selección de despliegues recientes (imágenes de muestra).</p>
+      </header>
+
+      <article class="card project">
+        <img src="https://picsum.photos/id/1040/800/450" alt="Proyecto 1" loading="lazy">
+        <h3>Base avanzada — Zona costera</h3>
+        <p>Complejo modular con hangares y almacenes climatizados.</p>
+      </article>
+
+      <article class="card project">
+        <img src="https://picsum.photos/id/1045/800/450" alt="Proyecto 2" loading="lazy">
+        <h3>Campamento de campaña</h3>
+        <p>Despliegue de shelters habitables y nodo C2.</p>
+      </article>
+
+      <article class="card project">
+        <img src="https://picsum.photos/id/1050/800/450" alt="Proyecto 3" loading="lazy">
+        <h3>Hub logístico</h3>
+        <p>Almacén temporal de gran luz con muelles y cubicaje optimizado.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CIFRAS / MÉTRICAS ===== -->
+  <section id="cifras" role="region" aria-label="Cifras clave">
+    <div class="container stats">
+      <div class="stat"><strong>72 h</strong><span>Tiempo mínimo de montaje</span></div>
+      <div class="stat"><strong>+40</strong><span>Proyectos desplegados</span></div>
+      <div class="stat"><strong>−25%</strong><span>Reducción de costes operativos</span></div>
+      <div class="stat"><strong>ISO</strong><span>Calidad y seguridad certificadas</span></div>
+    </div>
+  </section>
+
+  <!-- ===== CTA PRINCIPAL ===== -->
+  <section id="cta" role="region" aria-label="Llamada a la acción">
+    <div class="container cta-box">
+      <h2>¿Preparado para desplegar?</h2>
+      <p>Cuéntanos el entorno, cargas requeridas y plazo. Te enviamos una propuesta base.</p>
+      <a class="btn btn-primary" href="#contacto">Contactar</a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" role="region" aria-label="Contacto">
+    <div class="container contact">
+      <header class="section-header">
+        <h2>Contacto</h2>
+      </header>
+
+      <!-- Este formulario es estático; más adelante lo conectamos a un backend o servicio -->
+      <form class="contact-form" action="#" method="post">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+
+      <address class="contact-meta">
+        <p><strong>Alcazar Structures</strong></p>
+        <p>Operaciones globales · Atención 24/7</p>
+        <p><a href="mailto:contacto@alcazar-structures.example">contacto@alcazar-structures.example</a></p>
+      </address>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="container footer">
+      <nav aria-label="Enlaces legales">
+        <a href="#top">Inicio</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+      </nav>
+      <p>© <span id="year"></span> Alcazar Structures. Todos los derechos reservados.</p>
+    </div>
+    <script>
+      // Año dinámico (opcional)
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
