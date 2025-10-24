@@ -3,19 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+
   <title>Alcázar Structures — Estructuras modulares para defensa e industria</title>
   <meta name="description" content="Soluciones modulares de alta resistencia: hangares, estructuras de campaña y logística para defensa e industria." />
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Alcázar Structures" />
+  <meta property="og:description" content="Estructuras modulares para defensa e industria: hangares, logística y MRO." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/01_formacion_infantes_hangar.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="icon" href="assets/img/07_caza_hangar_despegue.jpg" type="image/jpeg" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="styles.min.css" as="style" />
+  <link rel="stylesheet" href="styles.min.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" aria-label="Cabecera">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Alcázar Structures, inicio">
         <span class="brand-mark">A</span><span class="brand-name">Alcázar Structures</span>
       </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Navegación principal">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">☰</button>
         <ul id="nav-menu" class="nav-menu">
           <li><a class="nav-link is-active" href="index.html">Inicio</a></li>
@@ -28,7 +40,8 @@
   </header>
 
   <main id="content">
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" aria-label="Portada">
       <picture>
         <img src="assets/img/01_formacion_infantes_hangar.jpg"
              alt="Formación de infantes en un hangar militar iluminado"
@@ -45,25 +58,26 @@
       </div>
     </section>
 
-    <section id="servicios" class="section">
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section" aria-labelledby="servicios-title">
       <div class="container">
-        <h2>Soluciones clave</h2>
+        <h2 id="servicios-title">Soluciones clave</h2>
         <div class="grid cards-3">
           <article class="card">
-            <div class="card-icon">🛩️</div>
+            <div class="card-icon" aria-hidden="true">🛩️</div>
             <h3>Hangares modulares</h3>
-            <p>Claro estructural amplio, climatización opcional y resistencia certificada.</p>
+            <p>Claros amplios, puertas aeronáuticas e integración MEP completa.</p>
             <a class="link-arrow" href="hangares.html">Más sobre hangares</a>
           </article>
           <article class="card">
-            <div class="card-icon">🏕️</div>
+            <div class="card-icon" aria-hidden="true">🏕️</div>
             <h3>Estructuras de campaña</h3>
-            <p>Montaje rápido, logística optimizada y escalabilidad operativa.</p>
+            <p>Montaje acelerado, logística optimizada y escalabilidad operativa.</p>
             <a class="link-arrow" href="#">Ver soluciones</a>
           </article>
           <article class="card">
-            <div class="card-icon">📦</div>
-            <h3>Logística & MRO</h3>
+            <div class="card-icon" aria-hidden="true">📦</div>
+            <h3>Logística &amp; MRO</h3>
             <p>Almacenes, talleres y estaciones MRO con accesos personalizados.</p>
             <a class="link-arrow" href="#">Explorar opciones</a>
           </article>
@@ -71,15 +85,16 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <!-- POR QUÉ -->
+    <section class="section section-alt" aria-labelledby="por-que-title">
       <div class="container split">
         <div>
-          <h2>¿Por qué Alcázar?</h2>
+          <h2 id="por-que-title">¿Por qué Alcázar?</h2>
           <ul class="checklist">
-            <li>Despliegue <strong>en semanas</strong> con impacto mínimo.</li>
+            <li>Despliegue <strong>en semanas</strong> con impacto mínimo en la operación.</li>
             <li>Diseño optimizado: <strong>ligero y duradero</strong>.</li>
             <li>Envolvente térmica y acústica configurable.</li>
-            <li>Integración total de sistemas MEP.</li>
+            <li>Integración de puertas aeronáuticas y sistemas MEP.</li>
           </ul>
           <div class="stack-sm">
             <a class="btn btn-primary" href="hangares.html">Especificaciones</a>
@@ -88,25 +103,29 @@
         </div>
         <figure class="media">
           <img src="assets/img/06_vehiculos_transporte_tropa.jpg"
-               alt="Vehículos de transporte de tropa en estructura modular logística"
+               alt="Vehículos de transporte de tropa en instalación logística"
                loading="lazy" width="1600" height="1067" />
         </figure>
       </div>
     </section>
 
-    <section id="contacto" class="section cta">
+    <!-- CTA -->
+    <section id="contacto" class="section cta" aria-labelledby="cta-title">
       <div class="container">
-        <h2>Cuéntanos tu proyecto</h2>
+        <h2 id="cta-title">Cuéntanos tu proyecto</h2>
         <p>Te respondemos con un anteproyecto y plazo estimado.</p>
-        <a class="btn btn-primary" href="mailto:info@alcazar-structures.com">Contactar</a>
+        <a class="btn btn-primary" href="mailto:info@alcazar-structures.com?subject=Proyecto%20de%20estructuras">Contactar</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Alcázar Structures. Todos los derechos reservados.</p>
-      <nav><a href="#">Privacidad</a><a href="#">Términos</a></nav>
+      <nav aria-label="Enlaces legales">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+      </nav>
     </div>
   </footer>
 </body>
