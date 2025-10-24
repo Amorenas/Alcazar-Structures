@@ -1,4 +1,4 @@
-// Año dinámico en footer
+// Año dinámico + navegación + tema persistente
 document.addEventListener('DOMContentLoaded', () => {
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else root.setAttribute('data-theme', 'auto');
   }
   applySavedTheme();
+  if (btnTheme) btnTheme.title = `Tema: ${root.getAttribute('data-theme') || 'auto'}`;
 
   if (btnTheme) {
     btnTheme.addEventListener('click', () => {
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const next = current === 'auto' ? 'dark' : current === 'dark' ? 'light' : 'auto';
       root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
+      btnTheme.title = `Tema: ${next}`;
     });
   }
 });
