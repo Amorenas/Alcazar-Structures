@@ -1,0 +1,135 @@
+/* ---- Design tokens (modo claro/oscuro) ---- */
+:root {
+  --brand: #3866ff;
+  --brand-2: #00d2a8;
+  --bg: #0b0d12;
+  --surface: #0f131a;
+  --elev: #151b24;
+  --text: #e8eef6;
+  --muted: #9fb0c6;
+  --border: #273140;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 14px;
+  --container: 1120px;
+
+  /* Tipografía fluida */
+  --step--1: clamp(.88rem, .86rem + .2vw, 1rem);
+  --step-0: clamp(1rem, .95rem + .5vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.1rem + .9vw, 1.5rem);
+  --step-2: clamp(1.5rem, 1.2rem + 1.6vw, 2rem);
+  --step-3: clamp(2rem, 1.5rem + 3vw, 2.8rem);
+  --step-4: clamp(2.5rem, 2rem + 3.8vw, 3.6rem);
+}
+@media (prefers-color-scheme: light) {
+  :root { 
+    --bg: #ffffff; --surface: #f7f9fc; --elev: #ffffff;
+    --text: #0b1220; --muted: #5f6b7b; --border: #e6e9ef;
+    --shadow: 0 10px 24px rgba(2,13,42,.08);
+  }
+}
+html[data-theme="dark"] {
+  --bg: #0b0d12; --surface: #0f131a; --elev: #151b24;
+  --text: #e8eef6; --muted: #9fb0c6; --border: #273140;
+}
+html[data-theme="light"] {
+  --bg: #ffffff; --surface: #f7f9fc; --elev: #ffffff;
+  --text: #0b1220; --muted: #5f6b7b; --border: #e6e9ef;
+}
+
+/* ---- Reset razonable + base ---- */
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color:var(--text); background:var(--bg);
+  font-size:var(--step-0); line-height:1.6; text-rendering:optimizeLegibility;
+}
+img{max-width:100%; height:auto; display:block; border-radius:12px}
+a{color:var(--brand); text-decoration:none}
+a:hover{opacity:.9}
+.container{max-width:var(--container); margin-inline:auto; padding-inline:20px}
+.section{padding: clamp(2.5rem, 2rem + 3vw, 5rem) 0}
+.section-alt{background:var(--surface)}
+h1{font-size:var(--step-4); line-height:1.1; margin:.2em 0 .4em}
+h2{font-size:var(--step-2); line-height:1.2; margin:0 0 .6em}
+h3{font-size:var(--step-1); margin:.3em 0}
+
+/* ---- Header / Nav ---- */
+.site-header{position:sticky; top:0; backdrop-filter:saturate(140%) blur(8px); background:color-mix(in oklab, var(--bg), transparent 20%); border-bottom:1px solid var(--border); z-index:50}
+.header-inner{display:flex; align-items:center; justify-content:space-between; height:64px}
+.brand{display:flex; align-items:center; gap:.6rem; font-weight:700; color:var(--text)}
+.brand-mark{display:inline-grid; place-items:center; width:32px; height:32px; border-radius:8px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:white; font-weight:800}
+.brand-name{letter-spacing:.3px}
+.nav-toggle{display:none; background:none; border:1px solid var(--border); padding:.4rem .6rem; border-radius:10px; color:var(--text)}
+.nav-menu{display:flex; align-items:center; gap:1rem; list-style:none; margin:0; padding:0}
+.nav-link{padding:.5rem .8rem; border-radius:10px}
+.nav-link:hover, .nav-link.is-active{background:var(--surface)}
+.theme-toggle{border:1px solid var(--border); background:var(--elev); color:var(--text); padding:.4rem .6rem; border-radius:10px; cursor:pointer}
+
+@media (max-width: 860px){
+  .nav-toggle{display:block}
+  .nav-menu{position:fixed; inset:64px 0 auto 0; background:var(--surface); border-bottom:1px solid var(--border); padding:1rem; display:none; flex-direction:column; align-items:flex-start}
+  .nav-menu.open{display:flex}
+}
+
+/* ---- Hero ---- */
+.hero{position:relative; min-height:64svh; display:grid; place-items:center; isolation:isolate}
+.hero-small{min-height:48svh}
+.hero img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:saturate(1.1) contrast(1.05)}
+.hero-overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.5), rgba(0,0,0,.25))}
+html[data-theme="light"] .hero-overlay{background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.1))}
+.hero-content{position:relative; z-index:1; text-align:left; color:#fff; width:100%}
+.hero-content h1{max-width:18ch}
+.hero p{max-width:60ch; color: #f0f4ff}
+
+/* ---- Buttons ---- */
+.btn{display:inline-block; padding:.9rem 1.1rem; border-radius:12px; font-weight:600; border:1px solid transparent; transition:transform .1s ease, box-shadow .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; box-shadow: var(--shadow)}
+.btn-outline{background:transparent; color:#fff; border-color: #ffffff66}
+.btn-ghost{background:var(--elev); color:var(--text); border:1px solid var(--border)}
+.link-arrow{display:inline-flex; align-items:center; gap:.4rem; font-weight:600}
+.link-arrow::after{content:"→"}
+
+/* ---- Layout blocks ---- */
+.grid{display:grid; gap:clamp(1rem, .6rem + 1vw, 2rem)}
+.cards-3{grid-template-columns:repeat(3,1fr)}
+.gallery{grid-template-columns:repeat(4,1fr)}
+.split{display:grid; grid-template-columns: 1.15fr .85fr; gap:2rem; align-items:center}
+.media{margin:0}
+.table-wrap{overflow:auto; background:var(--elev); border:1px solid var(--border); border-radius:var(--radius); padding:6px}
+
+@media (max-width: 960px){
+  .cards-3{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns: 1fr}
+}
+
+/* ---- Cards ---- */
+.card{background:var(--elev); padding:1.2rem; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow); transition: translate .2s ease, box-shadow .2s ease}
+.card:hover{translate:0 -3px}
+.card-icon{font-size:1.6rem; opacity:.9}
+
+/* ---- Lists ---- */
+.checklist{padding:0; margin:0 0 1rem; list-style:none}
+.checklist li{padding-left:1.6rem; position:relative; margin:.5rem 0}
+.checklist li::before{content:"✓"; position:absolute; left:.2rem; color:var(--brand)}
+
+/* ---- Tables ---- */
+.spec-table{width:100%; border-collapse:collapse; font-size:var(--step--1)}
+.spec-table th, .spec-table td{padding:.75rem 1rem; border-bottom:1px solid var(--border)}
+.spec-table thead th{text-align:left; background:var(--surface); position:sticky; top:0}
+
+/* ---- CTA ---- */
+.cta{display:grid; gap:.8rem; place-items:center; text-align:center}
+.stack-sm > *{margin-right:.6rem}
+
+/* ---- Footer ---- */
+.site-footer{border-top:1px solid var(--border); background:var(--surface)}
+.footer-inner{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 0}
+.footer-inner nav a{margin-left:1rem}
+
+/* ---- Motion preferences ---- */
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important; animation:none !important}
+}
