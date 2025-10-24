@@ -3,10 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+
   <title>Hangares modulares — Alcázar Structures</title>
   <meta name="description" content="Hangares modulares con claros de 20–80 m, integración MEP, montaje rápido y mantenimiento reducido." />
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Hangares modulares — Alcázar Structures" />
+  <meta property="og:description" content="Claros de 20–80 m, puertas aeronáuticas, MEP y despliegue rápido." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/02_hangar_exterior_pista_frontal.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="icon" href="assets/img/07_caza_hangar_despegue.jpg" type="image/jpeg" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="styles.min.css" as="style" />
+  <link rel="stylesheet" href="styles.min.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -28,6 +40,7 @@
   </header>
 
   <main id="content">
+    <!-- HERO -->
     <section class="hero hero-small">
       <picture>
         <img src="assets/img/02_hangar_exterior_pista_frontal.jpg"
@@ -42,9 +55,10 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- FEATURES -->
+    <section class="section" aria-labelledby="features-title">
       <div class="container">
-        <h2>Características</h2>
+        <h2 id="features-title">Características</h2>
         <div class="grid cards-3">
           <article class="card"><div class="card-icon">⚙️</div><h3>Estructura</h3><p>Arcos metálicos, uniones atornilladas y materiales certificados.</p></article>
           <article class="card"><div class="card-icon">🌡️</div><h3>Envolvente</h3><p>Panel sándwich o membrana técnica con aislamiento configurable.</p></article>
@@ -56,9 +70,10 @@
       </div>
     </section>
 
-    <section id="especificaciones" class="section section-alt">
+    <!-- SPECS -->
+    <section id="especificaciones" class="section section-alt" aria-labelledby="specs-title">
       <div class="container">
-        <h2>Especificaciones típicas</h2>
+        <h2 id="specs-title">Especificaciones típicas</h2>
         <div class="table-wrap">
           <table class="spec-table">
             <thead>
@@ -69,7 +84,7 @@
               <tr><td>Altura al alero</td><td>8–20 m</td><td>Según aeronave y uso</td></tr>
               <tr><td>Carga viento</td><td>Hasta 160 km/h</td><td>Zona y normativa local</td></tr>
               <tr><td>Carga nieve</td><td>Hasta 2,0 kN/m²</td><td>Diseño por ubicación</td></tr>
-              <tr><td>Puertas</td><td>Seccional o corredera</td><td>Automatización opcional</td></tr>
+              <tr><td>Puertas</td><td>Seccionales o correderas</td><td>Automatización opcional</td></tr>
               <tr><td>Revestimiento</td><td>Panel o membrana</td><td>Con aislamiento</td></tr>
             </tbody>
           </table>
@@ -77,9 +92,10 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- GALERÍA -->
+    <section class="section" aria-labelledby="galeria-title">
       <div class="container">
-        <h2>Galería</h2>
+        <h2 id="galeria-title">Galería</h2>
         <div class="grid gallery">
           <img src="assets/img/07_caza_hangar_despegue.jpg" alt="Caza de combate dentro del hangar listo para despegar" loading="lazy" />
           <img src="assets/img/08_helicopteros_hangar.jpg" alt="Helicópteros de combate en hangar con aspas plegadas" loading="lazy" />
@@ -93,11 +109,12 @@
       </div>
     </section>
 
-    <section class="section cta">
+    <!-- CTA -->
+    <section class="section cta" aria-labelledby="cta2-title">
       <div class="container">
-        <h2>¿Listo para dimensionar tu hangar?</h2>
+        <h2 id="cta2-title">¿Listo para dimensionar tu hangar?</h2>
         <p>Solicita un anteproyecto con layout y plazos.</p>
-        <a class="btn btn-primary" href="mailto:info@alcazar-structures.com">Solicitar propuesta</a>
+        <a class="btn btn-primary" href="mailto:info@alcazar-structures.com?subject=Solicitud%20de%20hangar">Solicitar propuesta</a>
         <a class="btn btn-ghost" href="index.html">Volver al inicio</a>
       </div>
     </section>
