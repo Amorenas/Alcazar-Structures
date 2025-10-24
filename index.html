@@ -1,220 +1,120 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" data-theme="auto">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alcazar Structures — Soluciones modulares y de ingeniería</title>
-  <meta name="description" content="Infraestructura modular, ingeniería rápida de despliegue y soluciones para defensa, emergencias y logística.">
-  <!-- Cuando pasemos a la fase creativa, aquí enlazaremos CSS y fuentes -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alcázar Structures — Estructuras modulares para defensa e industria</title>
+  <meta name="description" content="Soluciones modulares de alta resistencia: hangares, estructuras de campaña y logística para defensa e industria. Despliegue rápido, mantenimiento reducido." />
+  <meta property="og:title" content="Alcázar Structures" />
+  <meta property="og:description" content="Estructuras modulares para defensa e industria." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/hero.jpg" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
-
 <body>
-  <!-- ===== HEADER / NAV ===== -->
-  <header id="top" role="banner">
-    <div class="container">
-      <a class="brand" href="#top" aria-label="Inicio">Alcazar Structures</a>
+  <header class="site-header" aria-label="Cabecera">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Alcázar Structures, inicio">
+        <!-- No logo institucional; simple marca tipográfica -->
+        <span class="brand-mark">A</span><span class="brand-name">Alcázar Structures</span>
+      </a>
 
-      <nav aria-label="Menú principal">
-        <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false">Menú</button>
-        <ul id="mainmenu" class="nav-list">
-          <li><a href="#soluciones">Soluciones</a></li>
-          <li><a href="#capacidades">Capacidades</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#cifras">Cifras</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">☰</button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a class="nav-link is-active" href="index.html">Inicio</a></li>
+          <li><a class="nav-link" href="hangares.html">Hangares</a></li>
+          <li><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li><button class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">🌓</button></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ===== HERO ===== (gran imagen + mensaje + CTA) -->
-  <section id="hero" role="region" aria-label="Portada">
-    <!-- Reemplaza la imagen de fondo cuando apliquemos CSS -->
-    <div class="container hero-content">
-      <h1>Infraestructura modular para misiones críticas</h1>
-      <p>Despliegue rápido, rendimiento estructural y soporte integral en cualquier teatro de operaciones.</p>
-      <div class="cta-group">
-        <a class="btn btn-primary" href="#soluciones">Ver soluciones</a>
-        <a class="btn btn-secondary" href="#contacto">Solicitar propuesta</a>
+  <main id="content">
+    <section class="hero" aria-label="Portada">
+      <picture>
+        <source srcset="assets/img/hero.webp" type="image/webp" />
+        <img src="assets/img/hero.jpg" alt="Hangar modular con aeronave en plataforma" loading="eager" />
+      </picture>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Estructuras modulares para la defensa e industria</h1>
+        <p>Diseño ligero, resistencia certificada y despliegue en semanas. Hangares, soluciones de campaña y logística a tu medida.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="hangares.html">Ver hangares</a>
+          <a class="btn btn-outline" href="#servicios">Nuestros servicios</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== BLOQUES DE VALOR (3–4 columnas) ===== -->
-  <section id="valor" role="region" aria-label="Propuesta de valor">
-    <div class="container cards">
-      <article class="card">
-        <h3>Despliegue rápido</h3>
-        <p>Diseños prefabricados y logística optimizada para tiempos de instalación mínimos.</p>
-      </article>
-      <article class="card">
-        <h3>Rendimiento certificado</h3>
-        <p>Soluciones calculadas para viento, nieve y cargas operativas exigentes.</p>
-      </article>
-      <article class="card">
-        <h3>Modularidad</h3>
-        <p>Configuraciones escalables para hangares, almacenes, shelters y bases temporales.</p>
-      </article>
-      <article class="card">
-        <h3>Soporte integral</h3>
-        <p>Ingeniería, suministro, montaje y mantenimiento con un único interlocutor.</p>
-      </article>
-    </div>
-  </section>
+    <section id="servicios" class="section" aria-labelledby="servicios-title">
+      <div class="container">
+        <h2 id="servicios-title">Soluciones clave</h2>
+        <div class="grid cards-3">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🛩️</div>
+            <h3>Hangares modulares</h3>
+            <p>Claro estructural amplio, climatización opcional y resistencia a viento/nieve según normativa.</p>
+            <a class="link-arrow" href="hangares.html">Más sobre hangares</a>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🏕️</div>
+            <h3>Estructuras de campaña</h3>
+            <p>Montaje rápido, logística optimizada y escalabilidad para misiones temporales o permanentes.</p>
+            <a class="link-arrow" href="#">Ver soluciones</a>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📦</div>
+            <h3>Logística & MRO</h3>
+            <p>Almacenes, talleres y estaciones MRO con pasarelas, puente grúa y accesos a medida.</p>
+            <a class="link-arrow" href="#">Explorar opciones</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <!-- ===== SOLUCIONES (como “use cases” de la referencia) ===== -->
-  <section id="soluciones" role="region" aria-label="Soluciones">
-    <div class="container grid">
-      <header class="section-header">
-        <h2>Soluciones</h2>
-        <p>Estructuras para defensa, emergencias y logística.</p>
-      </header>
-
-      <article class="solution">
-  <a class="solution-media" href="hangares.html" aria-label="Hangares modulares — más información">
-    <img src="https://picsum.photos/id/1011/960/540" alt="Hangares modulares" loading="lazy">
-  </a>
-  <div class="solution-body">
-    <h3><a class="link" href="hangares.html">Hangares modulares</a></h3>
-    <p>Claro libre, grandes luces y accesos de alta altura para aeronaves y UAS.</p>
-    <a class="link" href="hangares.html">Ver detalles</a>
-  </div>
-</article>
-
-      <article class="solution">
-        <figure class="solution-media">
-          <img src="https://picsum.photos/id/1022/960/540" alt="Shelters y campamentos" loading="lazy">
+    <section class="section section-alt" aria-labelledby="por-que-title">
+      <div class="container split">
+        <div>
+          <h2 id="por-que-title">¿Por qué Alcázar?</h2>
+          <ul class="checklist">
+            <li>Despliegue <strong>en semanas</strong> con impacto mínimo en la operación.</li>
+            <li>Diseño optimizado: <strong>menos peso</strong>, máxima durabilidad.</li>
+            <li>Envolvente térmica y acústica configurable.</li>
+            <li>Integración de puertas aeronáuticas, E/S y sistemas MEP.</li>
+          </ul>
+          <div class="stack-sm">
+            <a class="btn btn-primary" href="hangares.html">Especificaciones de hangares</a>
+            <a class="btn btn-ghost" href="#contacto">Solicitar propuesta</a>
+          </div>
+        </div>
+        <figure class="media">
+          <img src="assets/img/inside-hangar.jpg" alt="Interior de hangar modular con estructura en arco" loading="lazy" />
         </figure>
-        <div class="solution-body">
-          <h3>Shelters y campamentos</h3>
-          <p>Módulos habitables, sanidad de campaña y nodos C2 con climatización integrada.</p>
-          <a class="link" href="#contacto">Solicitar ficha técnica</a>
-        </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="solution">
-        <figure class="solution-media">
-          <img src="https://picsum.photos/id/1032/960/540" alt="Almacenes y logística" loading="lazy">
-        </figure>
-        <div class="solution-body">
-          <h3>Almacenes y logística</h3>
-          <p>Infraestructura de almacenamiento, muelles y cubiertas temporales de gran capacidad.</p>
-          <a class="link" href="#contacto">Solicitar ficha técnica</a>
-        </div>
-      </article>
-    </div>
-  </section>
+    <section id="contacto" class="section" aria-labelledby="cta-title">
+      <div class="container cta">
+        <h2 id="cta-title">Cuéntanos tu proyecto</h2>
+        <p>Te respondemos con un anteproyecto y plazo estimado.</p>
+        <a class="btn btn-primary" href="mailto:info@alcazar-structures.com?subject=Proyecto%20de%20estructuras">Contactar</a>
+      </div>
+    </section>
+  </main>
 
-  <!-- ===== CAPACIDADES (rejilla de iconos/viñetas) ===== -->
-  <section id="capacidades" role="region" aria-label="Capacidades">
-    <div class="container grid-icons">
-      <header class="section-header">
-        <h2>Capacidades</h2>
-      </header>
-      <ul class="capabilities-list">
-        <li><strong>Ingeniería estructural</strong> — cálculo, modelado y memoria técnica.</li>
-        <li><strong>Prefabricación</strong> — producción estandarizada y control de calidad.</li>
-        <li><strong>Integraciones MEP</strong> — clima, potencia, iluminación y redes.</li>
-        <li><strong>Montaje rápido</strong> — equipos certificados y procedimientos HSE.</li>
-        <li><strong>Soporte ciclo de vida</strong> — repuestos, inspecciones y upgrades.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== PROYECTOS (malla de tarjetas) ===== -->
-  <section id="proyectos" role="region" aria-label="Proyectos">
-    <div class="container cards">
-      <header class="section-header">
-        <h2>Proyectos destacados</h2>
-        <p>Selección de despliegues recientes (imágenes de muestra).</p>
-      </header>
-
-      <article class="card project">
-        <img src="https://picsum.photos/id/1040/800/450" alt="Proyecto 1" loading="lazy">
-        <h3>Base avanzada — Zona costera</h3>
-        <p>Complejo modular con hangares y almacenes climatizados.</p>
-      </article>
-
-      <article class="card project">
-        <img src="https://picsum.photos/id/1045/800/450" alt="Proyecto 2" loading="lazy">
-        <h3>Campamento de campaña</h3>
-        <p>Despliegue de shelters habitables y nodo C2.</p>
-      </article>
-
-      <article class="card project">
-        <img src="https://picsum.photos/id/1050/800/450" alt="Proyecto 3" loading="lazy">
-        <h3>Hub logístico</h3>
-        <p>Almacén temporal de gran luz con muelles y cubicaje optimizado.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===== CIFRAS / MÉTRICAS ===== -->
-  <section id="cifras" role="region" aria-label="Cifras clave">
-    <div class="container stats">
-      <div class="stat"><strong>72 h</strong><span>Tiempo mínimo de montaje</span></div>
-      <div class="stat"><strong>+40</strong><span>Proyectos desplegados</span></div>
-      <div class="stat"><strong>−25%</strong><span>Reducción de costes operativos</span></div>
-      <div class="stat"><strong>ISO</strong><span>Calidad y seguridad certificadas</span></div>
-    </div>
-  </section>
-
-  <!-- ===== CTA PRINCIPAL ===== -->
-  <section id="cta" role="region" aria-label="Llamada a la acción">
-    <div class="container cta-box">
-      <h2>¿Preparado para desplegar?</h2>
-      <p>Cuéntanos el entorno, cargas requeridas y plazo. Te enviamos una propuesta base.</p>
-      <a class="btn btn-primary" href="#contacto">Contactar</a>
-    </div>
-  </section>
-
-  <!-- ===== CONTACTO ===== -->
-  <section id="contacto" role="region" aria-label="Contacto">
-    <div class="container contact">
-      <header class="section-header">
-        <h2>Contacto</h2>
-      </header>
-
-      <!-- Este formulario es estático; más adelante lo conectamos a un backend o servicio -->
-      <form class="contact-form" action="#" method="post">
-        <div class="field">
-          <label for="nombre">Nombre</label>
-          <input id="nombre" name="nombre" type="text" required>
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
-        </div>
-        <div class="field">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">Enviar</button>
-      </form>
-
-      <address class="contact-meta">
-        <p><strong>Alcazar Structures</strong></p>
-        <p>Operaciones globales · Atención 24/7</p>
-        <p><a href="mailto:contacto@alcazar-structures.example">contacto@alcazar-structures.example</a></p>
-      </address>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer role="contentinfo">
-    <div class="container footer">
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Alcázar Structures. Todos los derechos reservados.</p>
       <nav aria-label="Enlaces legales">
-        <a href="#top">Inicio</a>
         <a href="#">Privacidad</a>
         <a href="#">Términos</a>
       </nav>
-      <p>© <span id="year"></span> Alcazar Structures. Todos los derechos reservados.</p>
     </div>
-    <script>
-      // Año dinámico (opcional)
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </footer>
 </body>
 </html>
-
