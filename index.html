@@ -1,80 +1,66 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Alcázar Structures — Hangares modulares</title>
-<link rel="preload" href="assets/img/logo.svg?v=2" as="image">
-<link rel="stylesheet" href="assets/css/styles.css?v=5"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Alcázar Structures — Hangares modulares</title>
+  <link rel="preload" href="assets/img/logo.svg?v=2" as="image">
+  <link rel="stylesheet" href="styles.min.css?v=5"/>
 </head>
 <body>
-<!-- NAVBAR -->
-<header class="navbar">
-<a class="brand" href="/Alcazar-Structures/">
-<img src="assets/img/logo.svg?v=2" alt="Alcázar Structures" class="brand-logo" width="32" height="32"/>
-<span class="brand-text">Alcázar Structures</span>
-</a>
-<nav class="menu">
-<a href="/Alcazar-Structures/" class="active">Inicio</a>
-<a href="/Alcazar-Structures/hangares.html">Hangares</a>
-<a href="/Alcazar-Structures/contacto.html">Contacto</a>
-<button class="lang" aria-label="Cambiar idioma">🌐</button>
-</nav>
-</header>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="brand" href="/Alcazar-Structures/">
+      <img src="assets/img/logo.svg?v=2" alt="Alcázar Structures" class="brand-logo" width="32" height="32"/>
+      <span class="brand-text">Alcázar Structures</span>
+    </a>
+    <nav class="menu">
+      <a href="/Alcazar-Structures/" class="active">Inicio</a>
+      <a href="/Alcazar-Structures/hangares.html">Hangares</a>
+      <a href="/Alcazar-Structures/contacto.html">Contacto</a>
+      <button class="lang" aria-label="Cambiar idioma">🌐</button>
+    </nav>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-bg" src="assets/img/hero-hangar.jpg" alt="Hangar modular">
+    <div class="hero-overlay">
+      <h1>Hangares modulares</h1>
+      <p>Claros de 20–80 m, alta resistencia y montaje acelerado.</p>
+      <a class="btn btn-primary" href="#especificaciones">Ver especificaciones</a>
+    </div>
+  </section>
 
-<!-- HERO -->
-<section class="hero">
-<img class="hero-bg" src="assets/img/hero-hangar.jpg" alt="Hangar modular"/>
-<div class="hero-overlay">
-<h1>Hangares modulares</h1>
-<p>Claros de 20–80 m, alta resistencia y montaje acelerado.</p>
-<a class="btn btn-primary" href="#especificaciones">Ver especificaciones</a>
-</div>
-</section>
+  <main class="container">
+    <h2>Características</h2>
+    <div class="cards">
+      <article class="card"><h3>Estructura</h3><p>Arcos metálicos y uniones atornilladas.</p></article>
+      <article class="card"><h3>Envolvente</h3><p>Panel sándwich o membrana técnica.</p></article>
+      <article class="card"><h3>Puertas</h3><p>Seccionales o correderas, automatizables.</p></article>
+    </div>
 
+    <h2 id="galeria">Galería</h2>
+    <!-- Si no tienes miniaturas, pon el mismo archivo en src y data-full -->
+    <div class="gallery" data-lightbox>
+      <figure><img src="assets/img/h1.jpg" data-full="assets/img/h1.jpg" alt="Hangar 1"></figure>
+      <figure><img src="assets/img/h2.jpg" data-full="assets/img/h2.jpg" alt="Hangar 2"></figure>
+      <figure><img src="assets/img/h3.jpg" data-full="assets/img/h3.jpg" alt="Hangar 3"></figure>
+      <figure><img src="assets/img/h4.jpg" data-full="assets/img/h4.jpg" alt="Hangar 4"></figure>
+    </div>
+  </main>
 
-<!-- CARDS (ejemplo) -->
-<main class="container">
-<h2>Características</h2>
-<div class="cards">
-<article class="card"><h3>Estructura</h3><p>Arcos metálicos y uniones atornilladas.</p></article>
-<article class="card"><h3>Envolvente</h3><p>Panel sándwich o membrana técnica.</p></article>
-<article class="card"><h3>Puertas</h3><p>Seccionales o correderas, automatizables.</p></article>
-</div>
+  <!-- LIGHTBOX -->
+  <div class="lb" id="lightbox" aria-hidden="true" hidden>
+    <button class="lb-close" aria-label="Cerrar (Esc)">×</button>
+    <button class="lb-prev" aria-label="Anterior">‹</button>
+    <figure class="lb-stage">
+      <img id="lb-img" alt="Imagen ampliada"/>
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="lb-next" aria-label="Siguiente">›</button>
+  </div>
 
-
-<h2 id="galeria">Galería</h2>
-<!-- GALERÍA: usa miniaturas clicables con data-full al original -->
-<div class="gallery" data-lightbox>
-<figure>
-<img src="assets/gallery/thumbs/h1.jpg" data-full="assets/gallery/full/h1.jpg" alt="Hangar 1">
-</figure>
-<figure>
-<img src="assets/gallery/thumbs/h2.jpg" data-full="assets/gallery/full/h2.jpg" alt="Hangar 2">
-</figure>
-<figure>
-<img src="assets/gallery/thumbs/h3.jpg" data-full="assets/gallery/full/h3.jpg" alt="Hangar 3">
-</figure>
-<figure>
-<img src="assets/gallery/thumbs/h4.jpg" data-full="assets/gallery/full/h4.jpg" alt="Hangar 4">
-</figure>
-</div>
-</main>
-
-
-<!-- LIGHTBOX (inserción única en la página) -->
-<div class="lb" id="lightbox" aria-hidden="true" hidden>
-<button class="lb-close" aria-label="Cerrar (Esc)">×</button>
-<button class="lb-prev" aria-label="Anterior">‹</button>
-<figure class="lb-stage">
-<img id="lb-img" alt="Imagen ampliada"/>
-<figcaption id="lb-cap"></figcaption>
-</figure>
-<button class="lb-next" aria-label="Siguiente">›</button>
-</div>
-
-
-<script src="assets/js/main.js?v=5" defer></script>
+  <script src="script.js?v=5" defer></script>
 </body>
 </html>
