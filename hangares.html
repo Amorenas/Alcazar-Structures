@@ -1,130 +1,77 @@
 <!doctype html>
-<html lang="es" data-theme="auto">
+<html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
-
-  <title>Hangares modulares — Alcázar Structures</title>
-  <meta name="description" content="Hangares modulares con claros de 20–80 m, integración MEP, montaje rápido y mantenimiento reducido." />
-
-  <!-- Open Graph / SEO -->
-  <meta property="og:title" content="Hangares modulares — Alcázar Structures" />
-  <meta property="og:description" content="Claros de 20–80 m, puertas aeronáuticas, MEP y despliegue rápido." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/02_hangar_exterior_pista_frontal.jpg" />
-  <meta property="og:locale" content="es_ES" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" href="assets/img/07_caza_hangar_despegue.jpg" type="image/jpeg" />
-  <link rel="preload" href="styles.min.css?v=1" as="style" />
-  <link rel="stylesheet" href="styles.min.css?v=1" />
-  <script defer src="script.js?v=1"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Alcázar Structures — Hangares</title>
+  <link rel="preload" href="assets/img/logo.svg?v=2" as="image">
+  <link rel="stylesheet" href="styles.min.css?v=5"/>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">A</span><span class="brand-name">Alcázar Structures</span>
-      </a>
-      <nav class="nav">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">☰</button>
-        <ul id="nav-menu" class="nav-menu">
-          <li><a class="nav-link" href="index.html">Inicio</a></li>
-          <li><a class="nav-link is-active" href="hangares.html">Hangares</a></li>
-          <li><a class="nav-link" href="index.html#contacto">Contacto</a></li>
-          <li><button class="theme-toggle" aria-label="Cambiar tema">🌓</button></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="brand" href="/Alcazar-Structures/">
+      <img src="assets/img/logo.svg?v=2" alt="Alcázar Structures" class="brand-logo" width="32" height="32"/>
+      <span class="brand-text">Alcázar Structures</span>
+    </a>
+    <nav class="menu">
+      <a href="/Alcazar-Structures/">Inicio</a>
+      <a class="active" href="/Alcazar-Structures/hangares.html">Hangares</a>
+      <a href="/Alcazar-Structures/contacto.html">Contacto</a>
+      <button class="lang" aria-label="Cambiar idioma">🌐</button>
+    </nav>
   </header>
 
-  <main id="content">
-    <!-- HERO -->
-    <section class="hero hero-small">
-      <picture>
-        <img src="assets/img/02_hangar_exterior_pista_frontal.jpg"
-             alt="Vista frontal de hangar modular a pie de pista"
-             loading="eager" width="2400" height="1350" />
-      </picture>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1>Hangares modulares</h1>
-        <p>Claros de 20–80 m, alta resistencia y montaje acelerado.</p>
-        <a class="btn btn-primary" href="#especificaciones">Ver especificaciones</a>
-      </div>
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-bg" src="assets/img/hero-hangares.jpg" alt="Hangares Alcázar">
+    <div class="hero-overlay">
+      <h1>Hangares</h1>
+      <p>Soluciones modulares para aviación, defensa y logística.</p>
+      <a class="btn btn-primary" href="#modelos">Ver modelos</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section>
+      <h2>Modelos y configuraciones</h2>
+      <p>Claros de 20–80 m, envolvente en panel o membrana, y puertas seccionales/correderas. Cálculo a Eurocódigo y montaje acelerado.</p>
     </section>
 
-    <!-- FEATURES -->
-    <section class="section" aria-labelledby="features-title">
-      <div class="container">
-        <h2 id="features-title">Características</h2>
-        <div class="grid cards-3">
-          <article class="card"><div class="card-icon">⚙️</div><h3>Estructura</h3><p>Arcos metálicos, uniones atornilladas y materiales certificados.</p></article>
-          <article class="card"><div class="card-icon">🌡️</div><h3>Envolvente</h3><p>Panel sándwich o membrana técnica con aislamiento configurable.</p></article>
-          <article class="card"><div class="card-icon">🚪</div><h3>Puertas</h3><p>Puertas aeronáuticas seccionales o correderas, automatizables.</p></article>
-          <article class="card"><div class="card-icon">🏗️</div><h3>Integraciones</h3><p>Puente grúa, pasarelas, MEP e iluminación LED.</p></article>
-          <article class="card"><div class="card-icon">🧰</div><h3>Mantenimiento</h3><p>Componentes modulares, recambios estándar y bajo coste operativo.</p></article>
-          <article class="card"><div class="card-icon">⏱️</div><h3>Despliegue</h3><p>Montaje en semanas gracias a la prefabricación.</p></article>
-        </div>
-      </div>
+    <section id="modelos" class="cards">
+      <article class="card"><h3>Serie A (20–35 m)</h3><p>Para aviación ligera y UAS.</p></article>
+      <article class="card"><h3>Serie B (36–60 m)</h3><p>MRO y logística.</p></article>
+      <article class="card"><h3>Serie C (61–80 m)</h3><p>Grandes claros.</p></article>
     </section>
 
-    <!-- SPECS -->
-    <section id="especificaciones" class="section section-alt" aria-labelledby="specs-title">
-      <div class="container">
-        <h2 id="specs-title">Especificaciones típicas</h2>
-        <div class="table-wrap">
-          <table class="spec-table">
-            <thead>
-              <tr><th>Parámetro</th><th>Rango</th><th>Notas</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Claro libre</td><td>20–80 m</td><td>Sin pilares interiores</td></tr>
-              <tr><td>Altura al alero</td><td>8–20 m</td><td>Según aeronave y uso</td></tr>
-              <tr><td>Carga viento</td><td>Hasta 160 km/h</td><td>Zona y normativa local</td></tr>
-              <tr><td>Carga nieve</td><td>Hasta 2,0 kN/m²</td><td>Diseño por ubicación</td></tr>
-              <tr><td>Puertas</td><td>Seccionales o correderas</td><td>Automatización opcional</td></tr>
-              <tr><td>Revestimiento</td><td>Panel o membrana</td><td>Con aislamiento</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <section id="especificaciones" class="cards" style="margin-top:1rem">
+      <article class="card"><h3>Estructura</h3><p>Arcos de acero, uniones atornilladas.</p></article>
+      <article class="card"><h3>Envolvente</h3><p>Panel PIR / lana mineral o membrana técnica.</p></article>
+      <article class="card"><h3>Puertas</h3><p>Seccionales, correderas o lona apilable.</p></article>
     </section>
 
-    <!-- GALERÍA -->
-    <section class="section" aria-labelledby="galeria-title">
-      <div class="container">
-        <h2 id="galeria-title">Galería</h2>
-        <div class="grid gallery">
-          <img src="assets/img/07_caza_hangar_despegue.jpg" alt="Caza de combate dentro del hangar listo para despegar" loading="lazy" />
-          <img src="assets/img/08_helicopteros_hangar.jpg" alt="Helicópteros de combate en hangar con aspas plegadas" loading="lazy" />
-          <img src="assets/img/03_taller_camion_mantenimiento.jpg" alt="Camión militar bajo mantenimiento" loading="lazy" />
-          <img src="assets/img/04_taller_carro_combate.jpg" alt="Carro de combate en mantenimiento" loading="lazy" />
-          <img src="assets/img/05_mantenimiento_aav_bradley.jpg" alt="Mantenimiento de vehículo blindado AAV Bradley" loading="lazy" />
-          <img src="assets/img/09_infanteria_hangar_portatil.jpg" alt="Infantería acomodada en hangar portátil" loading="lazy" />
-          <img src="assets/img/10_conferencia_hangar.jpg" alt="Conferencia de autoridades militares dentro del hangar" loading="lazy" />
-          <img src="assets/img/06_vehiculos_transporte_tropa.jpg" alt="Vehículos de transporte de tropa alineados en instalación" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section cta" aria-labelledby="cta2-title">
-      <div class="container">
-        <h2 id="cta2-title">¿Listo para dimensionar tu hangar?</h2>
-        <p>Solicita un anteproyecto con layout y plazos.</p>
-        <a class="btn btn-primary" href="mailto:info@alcazar-structures.com?subject=Solicitud%20de%20hangar">Solicitar propuesta</a>
-        <a class="btn btn-ghost" href="index.html">Volver al inicio</a>
+    <section style="margin-top:1.5rem">
+      <h2 id="galeria">Galería</h2>
+      <div class="gallery" data-lightbox>
+        <figure><img src="assets/img/h1.jpg" data-full="assets/img/h1.jpg" alt="Hangar serie A – vista frontal"></figure>
+        <figure><img src="assets/img/h2.jpg" data-full="assets/img/h2.jpg" alt="Hangar serie B – interior"></figure>
+        <figure><img src="assets/img/h3.jpg" data-full="assets/img/h3.jpg" alt="Hangar serie C – detalle de puerta"></figure>
+        <figure><img src="assets/img/h4.jpg" data-full="assets/img/h4.jpg" alt="Montaje en pista"></figure>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Alcázar Structures.</p>
-      <nav><a href="#">Privacidad</a><a href="#">Términos</a></nav>
-    </div>
-  </footer>
+  <!-- LIGHTBOX -->
+  <div class="lb" id="lightbox" aria-hidden="true" hidden>
+    <button class="lb-close" aria-label="Cerrar (Esc)">×</button>
+    <button class="lb-prev" aria-label="Anterior">‹</button>
+    <figure class="lb-stage">
+      <img id="lb-img" alt="Imagen ampliada"/>
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="lb-next" aria-label="Siguiente">›</button>
+  </div>
+
+  <script src="script.js?v=5" defer></script>
 </body>
 </html>
