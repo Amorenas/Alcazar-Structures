@@ -26,15 +26,18 @@
     <h1>Contacto</h1>
 
     <section class="card" style="max-width:780px;margin-inline:auto">
-      <p>Escríbenos tu consulta y la recibiremos en los correos
-        <strong>nicolas.garciaamorena@gmail.com</strong> y <strong>xnnieto@cud.uvigo.es</strong>.
-      </p>
+      <p>Escríbenos tu consulta o comentario y te responderemos lo antes posible.</p>
 
-      <!-- FormSubmit: envía por email sin backend -->
+      <!-- Formulario -->
       <form action="https://formsubmit.co/nicolas.garciaamorena@gmail.com" method="POST" class="contact-form">
         <!-- Campos visibles -->
         <div class="field">
-          <label for="email">Tu correo (para poder responder)</label>
+          <label for="nombre">Tu nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre completo" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Tu correo electrónico</label>
           <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
         </div>
 
@@ -45,19 +48,25 @@
 
         <button type="submit" class="btn btn-primary">Enviar consulta</button>
 
-        <!-- Opciones FormSubmit -->
+        <!-- Configuración FormSubmit -->
         <input type="hidden" name="_subject" value="Consulta desde Alcázar Structures">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <!-- Copia a segundo destinatario -->
+
+        <!-- Copia oculta a segundo correo -->
         <input type="hidden" name="_cc" value="xnnieto@cud.uvigo.es">
+
         <!-- Redirección tras enviar -->
         <input type="hidden" name="_next" value="https://amorenas.github.io/Alcazar-Structures/gracias.html">
+
+        <!-- Confirmación automática al usuario -->
+        <input type="hidden" name="_autoresponse"
+               value="Gracias por contactar con Alcázar Structures. Hemos recibido tu mensaje y te responderemos en breve.">
+
         <!-- Honeypot antispam -->
         <input type="text" name="_honey" style="display:none">
       </form>
 
-      <!-- Estilos locales para el formulario (no tocan tu CSS global) -->
       <style>
         .contact-form .field{display:flex;flex-direction:column;gap:.35rem;margin:.8rem 0}
         .contact-form input,.contact-form textarea{
@@ -68,13 +77,8 @@
         .contact-form button{margin-top:.6rem}
       </style>
     </section>
-
-    <p style="max-width:780px;margin:1rem auto 0;color:#576076;font-size:.95rem">
-      Nota: el primer envío puede pedirte confirmar el remitente por seguridad del servicio.
-    </p>
   </main>
 
-  <!-- Lightbox contenedor (no se usa aquí, pero no molesta si tu JS lo busca) -->
   <div class="lb" id="lightbox" aria-hidden="true" hidden>
     <button class="lb-close" aria-label="Cerrar (Esc)">×</button>
     <button class="lb-prev" aria-label="Anterior">‹</button>
