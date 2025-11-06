@@ -3,15 +3,15 @@
   const img = document.querySelector('.brand-logo');
   if(img && !img.src.includes('v=')){
     const url = new URL(img.getAttribute('src'), location.href);
-    url.searchParams.set('v','2');
+    url.searchParams.set('v','3'); // versión actual del logo
     img.src = url.toString();
   }
 })();
 
 // --- Lightbox sin dependencias (clic, teclas, swipe, ESC)
 (function lightbox(){
-  const gallery = document.querySelector('[data-lightbox]');
-  if(!gallery) return;
+  const galleries = document.querySelectorAll('[data-lightbox]');
+  if(!galleries.length) return;
 
   const lb = document.getElementById('lightbox');
   const img = document.getElementById('lb-img');
@@ -20,7 +20,7 @@
   const nextBtn = lb.querySelector('.lb-next');
   const closeBtn = lb.querySelector('.lb-close');
 
-  const items = Array.from(gallery.querySelectorAll('img[data-full]'));
+  let items = [];
   let index = 0;
 
   const open = (i)=>{
@@ -32,7 +32,6 @@
     lb.hidden = false;
     lb.setAttribute('aria-hidden','false');
     document.body.classList.add('noscroll');
-    // Preload vecinos
     [index-1,index+1].forEach(j=>{
       const k = (j+items.length)%items.length;
       new Image().src = items[k].dataset.full || items[k].src;
@@ -47,11 +46,14 @@
   const next = ()=> open(index+1);
   const prev = ()=> open(index-1);
 
-  items.forEach((el,i)=>{
-    el.setAttribute('tabindex','0');
-    el.addEventListener('click',()=>open(i));
-    el.addEventListener('keydown',e=>{
-      if(e.key==='Enter' || e.key===' '){ e.preventDefault(); open(i); }
+  galleries.forEach(gal=>{
+    const localItems = Array.from(gal.querySelectorAll('img[data-full],img[src]'));
+    localItems.forEach((el,i)=>{
+      el.setAttribute('tabindex','0');
+      el.addEventListener('click',()=>{ items = localItems; open(i); });
+      el.addEventListener('keydown',e=>{
+        if(e.key==='Enter' || e.key===' '){ e.preventDefault(); items = localItems; open(i); }
+      });
     });
   });
 
