@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Alcázar Structures — Contacto</title>
+  <link rel="preload" href="assets/img/logo.png?v=3" as="image">
+  <link rel="stylesheet" href="styles.min.css?v=6"/>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="brand" href="/Alcazar-Structures/">
+      <img src="assets/img/logo.png?v=3" alt="Alcázar Structures" class="brand-logo" width="56" height="56"/>
+      <span class="brand-text">Alcázar Structures</span>
+    </a>
+    <nav class="menu">
+      <a href="/Alcazar-Structures/">Inicio</a>
+      <a href="/Alcazar-Structures/hangares.html">Hangares</a>
+      <a class="active" href="/Alcazar-Structures/contacto.html">Contacto</a>
+      <button class="lang" aria-label="Cambiar idioma">🌐</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Contacto</h1>
+
+    <section class="card" style="max-width:780px;margin-inline:auto">
+      <p>Escríbenos tu consulta y la recibiremos en los correos
+        <strong>nicolas.garciaamorena@gmail.com</strong> y <strong>xnnieto@cud.uvigo.es</strong>.
+      </p>
+
+      <!-- FormSubmit: envía por email sin backend -->
+      <form action="https://formsubmit.co/nicolas.garciaamorena@gmail.com" method="POST" class="contact-form">
+        <!-- Campos visibles -->
+        <div class="field">
+          <label for="email">Tu correo (para poder responder)</label>
+          <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
+        </div>
+
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="8" placeholder="Escribe aquí tu consulta..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar consulta</button>
+
+        <!-- Opciones FormSubmit -->
+        <input type="hidden" name="_subject" value="Consulta desde Alcázar Structures">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Copia a segundo destinatario -->
+        <input type="hidden" name="_cc" value="xnnieto@cud.uvigo.es">
+        <!-- Redirección tras enviar -->
+        <input type="hidden" name="_next" value="https://amorenas.github.io/Alcazar-Structures/gracias.html">
+        <!-- Honeypot antispam -->
+        <input type="text" name="_honey" style="display:none">
+      </form>
+
+      <!-- Estilos locales para el formulario (no tocan tu CSS global) -->
+      <style>
+        .contact-form .field{display:flex;flex-direction:column;gap:.35rem;margin:.8rem 0}
+        .contact-form input,.contact-form textarea{
+          font:inherit;padding:.75rem .9rem;border:1px solid #e6e9ef;border-radius:12px;
+          background:#fff;box-shadow:0 2px 10px rgba(17,24,39,.04)
+        }
+        .contact-form input:focus,.contact-form textarea:focus{outline:3px solid #eef2ff;border-color:#1d39c4}
+        .contact-form button{margin-top:.6rem}
+      </style>
+    </section>
+
+    <p style="max-width:780px;margin:1rem auto 0;color:#576076;font-size:.95rem">
+      Nota: el primer envío puede pedirte confirmar el remitente por seguridad del servicio.
+    </p>
+  </main>
+
+  <!-- Lightbox contenedor (no se usa aquí, pero no molesta si tu JS lo busca) -->
+  <div class="lb" id="lightbox" aria-hidden="true" hidden>
+    <button class="lb-close" aria-label="Cerrar (Esc)">×</button>
+    <button class="lb-prev" aria-label="Anterior">‹</button>
+    <figure class="lb-stage">
+      <img id="lb-img" alt="Imagen ampliada"/>
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="lb-next" aria-label="Siguiente">›</button>
+  </div>
+
+  <script src="script.js?v=6" defer></script>
+</body>
+</html>
